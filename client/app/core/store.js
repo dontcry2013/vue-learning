@@ -6,6 +6,7 @@ import devices from "../modules/devices/store";
 import posts from "../modules/posts/store";
 import counter from "../modules/counter/store";
 import profile from "../modules/profile/store";
+import speaking from "../modules/speaking/store";
 
 Vue.use(Vuex);
 
@@ -15,6 +16,7 @@ export default new Vuex.Store({
 		counter,
 		devices,
 		posts,
-		profile
+		profile,
+		speaking,
 	}
 });

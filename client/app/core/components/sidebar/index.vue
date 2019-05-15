@@ -26,6 +26,11 @@
 						span.icon
 							i.fa.fa-comments
 						span.label {{ "Posts" | i18n }}
+				router-link(tag="li", to="/speaking")
+					a(:title="_('Speaking')")
+						span.icon
+							i.fa.fa-comments
+						span.label {{ "Speaking" | i18n }}
 
 			.title {{ "Profile" | i18n }}
 			ul

@@ -8,6 +8,7 @@ import Counter from "../modules/counter";
 import Devices from "../modules/devices";
 import Posts from "../modules/posts";
 import Profile from "../modules/profile";
+import Speaking from "../modules/speaking";
 
 Vue.use(VueRouter);
 
@@ -17,9 +18,10 @@ export default new VueRouter({
 		{ path: "/", component: Home },
 		{ path: "/devices", component: Devices },
 		{ path: "/posts", component: Posts },
-		{ path: "/counter", component: Counter },	
-		{ path: "/profile", component: Profile }
+		{ path: "/counter", component: Counter },
+		{ path: "/speaking", component: Speaking },
+		{ path: "/profile", component: Profile },
 		// { path: "/users", component: User, meta: { needRole: "admin" } },
-		//{ path: "*", component: NotFound }
+		// { path: "*", component: NotFound }
 	]
 });

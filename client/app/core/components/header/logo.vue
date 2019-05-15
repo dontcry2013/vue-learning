@@ -2,7 +2,7 @@
 	.logo
 		a.nav-item(href="#")
 			span 
-				strong VEM
+				strong ZAC
 				| App
 </template>
 
