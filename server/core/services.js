@@ -187,61 +187,61 @@ class Services extends EventEmitter {
 					// Create default RESTful handlers
 					switch (name) {
 
-					// You can call the `find` action with 
-					// 		GET /api/namespace/
-					case "find": {
-						router.get("/", handler);	
-						break;
-					}
+						// You can call the `find` action with 
+						// 		GET /api/namespace/
+						case "find": {
+							router.get("/", handler);	
+							break;
+						}
 
-					// You can call the `get` action with
-					// 		GET /api/namespace/?id=123 
-					// 	or 
-					// 		GET /api/namespace/123
-					case "get": {
-						// router.get("/:" + idParamName, handler);	
-						lastRoutes.push({ method: "get", path: "/:" + idParamName, handler: handler });
-						break;
-					}
+						// You can call the `get` action with
+						// 		GET /api/namespace/?id=123 
+						// 	or 
+						// 		GET /api/namespace/123
+						case "get": {
+							// router.get("/:" + idParamName, handler);	
+							lastRoutes.push({ method: "get", path: "/:" + idParamName, handler: handler });
+							break;
+						}
 
-					// You can call the `create` action with 
-					// 		POST /api/namespace/
-					case "create": {
-						// router.post("/:" + idParamName, handler);	
-						lastRoutes.push({ method: "post", path: "/:" + idParamName, handler: handler });
-						router.post("/", handler);	
-						break;
-					}
+						// You can call the `create` action with 
+						// 		POST /api/namespace/
+						case "create": {
+							// router.post("/:" + idParamName, handler);	
+							lastRoutes.push({ method: "post", path: "/:" + idParamName, handler: handler });
+							router.post("/", handler);	
+							break;
+						}
 
-					// You can call the `update` action with
-					// 		PUT /api/namespace/?id=123 
-					// 	or 
-					// 		PATCH /api/namespace/?id=123 
-					// 	or 
-					// 		PUT /api/namespace/123
-					// 	or 
-					// 		PATCH /api/namespace/123
-					case "update": {
-						// router.put("/:" + idParamName, handler);	
-						lastRoutes.push({ method: "put", path: "/:" + idParamName, handler: handler });
-						// router.patch("/:" + idParamName, handler);	
-						lastRoutes.push({ method: "patch", path: "/:" + idParamName, handler: handler });
+						// You can call the `update` action with
+						// 		PUT /api/namespace/?id=123 
+						// 	or 
+						// 		PATCH /api/namespace/?id=123 
+						// 	or 
+						// 		PUT /api/namespace/123
+						// 	or 
+						// 		PATCH /api/namespace/123
+						case "update": {
+							// router.put("/:" + idParamName, handler);	
+							lastRoutes.push({ method: "put", path: "/:" + idParamName, handler: handler });
+							// router.patch("/:" + idParamName, handler);	
+							lastRoutes.push({ method: "patch", path: "/:" + idParamName, handler: handler });
 
-						router.put("/", handler);	
-						router.patch("/", handler);	
-						break;
-					}
+							router.put("/", handler);	
+							router.patch("/", handler);	
+							break;
+						}
 
-					// You can call the `remove` action with 
-					// 		DELETE /api/namespace/?id=123 
-					// 	or 
-					// 		DELETE /api/namespace/123
-					case "remove": {
-						// router.delete("/:" + idParamName, handler);	
-						lastRoutes.push({ method: "delete", path: "/:" + idParamName, handler: handler });
-						router.delete("/", handler);	
-						break;
-					}
+						// You can call the `remove` action with 
+						// 		DELETE /api/namespace/?id=123 
+						// 	or 
+						// 		DELETE /api/namespace/123
+						case "remove": {
+							// router.delete("/:" + idParamName, handler);	
+							lastRoutes.push({ method: "delete", path: "/:" + idParamName, handler: handler });
+							router.delete("/", handler);	
+							break;
+						}
 					}
 
 				});

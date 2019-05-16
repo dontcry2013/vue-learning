@@ -114,7 +114,6 @@
 
 			selectAll(event) {
 				this.isNewModel = false;
-
 				let filter = Vue.filter("filterBy");
 				let filteredRows = filter(this.rows, this.search);
 
